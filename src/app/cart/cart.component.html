@@ -1,0 +1,20 @@
+<!-- cart.component.html -->
+<div class="cart">
+  <div *ngFor="let item of cartItems" class="cart-item">
+    <div class="item-image">
+      <img [src]="item.product.imageUrl" alt="{{ item.product.name }}">
+    </div>
+    <div class="item-details">
+      <p>{{ item.product.name }}</p>
+      <div>
+        <button (click)="decrementQuantity(item)">-</button>
+        <input type="text" [(ngModel)]="item.quantity" disabled>
+        <button (click)="incrementQuantity(item)">+</button>
+      </div>
+      <p>Total Price: €{{ item.totalPrice }}</p>
+    </div>
+  </div>
+  <div class="total-price">
+    <p>Total: €{{ calculateTotalPrice() }}</p>
+  </div>
+</div>

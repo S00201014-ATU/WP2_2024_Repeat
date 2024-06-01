@@ -1,0 +1,66 @@
+/* src/app/product-list/product-list.component.css */
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Adjust as needed */
+}
+
+.product-item {
+  width: calc(25% - 20px); /* Adjust as needed */
+  margin-bottom: 20px; /* Adjust as needed */
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  overflow: hidden; /* Prevent overflow */
+}
+
+.product-item:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Add shadow when hovering */
+}
+
+.product-item img {
+  max-width: 100%;
+}
+
+.product-item .product-details {
+  margin-bottom: 10px; /* Add some spacing between image and text */
+}
+
+.product-item h2 {
+  margin-top: 0.5rem;
+  font-size: 28px; /* Adjust as needed */
+  white-space: nowrap; /* Prevent line wrapping */
+  overflow: hidden; /* Prevent overflow */
+  text-overflow: ellipsis; /* Show ellipsis for overflow */
+}
+
+.product-item p {
+  font-weight: bold;
+  font-size: 20px; /* Adjust as needed */
+  white-space: nowrap; /* Prevent line wrapping */
+  overflow: hidden; /* Prevent overflow */
+  text-overflow: ellipsis; /* Show ellipsis for overflow */
+}
+
+.product-item .button-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-item button.edit-button,
+.product-item button.delete-button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.product-item button.edit-button:hover,
+.product-item button.delete-button:hover {
+  filter: brightness(90%);
+}
+

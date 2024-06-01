@@ -1,0 +1,12 @@
+<!-- product-detail.component.html -->
+<div class="product-detail" *ngIf="product">
+  <img [src]="product.imageUrl" alt="{{ product.name }}">
+  <div class="product-detail-header">
+    <h2>{{ product.name }}</h2>
+    <span class="price">€{{ product.price }}</span>
+    <button (click)="addToCart()">Add to Cart</button>
+  </div>
+</div>
+<div *ngIf="!product">
+  <p>Product not found.</p>
+</div>

@@ -1,0 +1,14 @@
+<!-- src/app/product-list/product-list.component.html -->
+<div class="product-list">
+  <div class="product-item" *ngFor="let product of products" (click)="viewDetails(product.id)">
+    <img [src]="product.imageUrl" alt="{{ product.name }}">
+    <div class="product-details">
+      <h2 [class.overflow]="product.name.length > 15">{{ product.name }}</h2>
+      <p [class.overflow]="product.price.toString().length > 10">€{{ product.price }}</p>
+    </div>
+    <div class="button-group">
+      <button class="edit-button" (click)="editProduct(product.id)">Edit</button>
+      <button class="delete-button" (click)="deleteProduct(product.id)">Delete</button>
+    </div>
+  </div>
+</div>

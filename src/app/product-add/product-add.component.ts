@@ -1,4 +1,3 @@
-// src/app/product-add/product-add.component.ts
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProductService } from '../product.service';
@@ -21,7 +20,6 @@ export class ProductAddComponent {
   constructor(private productService: ProductService, private router: Router) {}
 
   addProduct(): void {
-    // Generate a new ID based on the current product list
     const products = this.productService.getProducts();
     this.product.id = products.length ? Math.max(...products.map(p => p.id)) + 1 : 1;
 

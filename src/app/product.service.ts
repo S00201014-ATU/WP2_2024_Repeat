@@ -80,10 +80,8 @@ export class ProductService {
     const existingItemIndex = this.cartItems.findIndex(item => item.product.id === product.id);
 
     if (existingItemIndex !== -1) {
-      // If item already exists in cart, update quantity and totalPrice
       this.cartItems[existingItemIndex].quantity += quantity;
     } else {
-      // Otherwise, add new item to cart
       const newItem: CartItem = {
         product,
         quantity,

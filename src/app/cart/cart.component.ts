@@ -1,4 +1,3 @@
-// cart.component.ts
 
 import { Component, OnInit } from '@angular/core';
 import { CartItem } from '../cart-item.model';

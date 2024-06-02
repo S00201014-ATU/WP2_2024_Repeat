@@ -1,4 +1,3 @@
-// product-edit.component.ts
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from '../product.service';
@@ -24,11 +23,9 @@ export class ProductEditComponent implements OnInit {
   }
 
   updateProduct(): void {
-    // Update the product in the service
     if (this.product) {
       this.productService.updateProduct(this.product);
     }
-    // Navigate back to product list
     this.router.navigate(['/']);
   }
 }
